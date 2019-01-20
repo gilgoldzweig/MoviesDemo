@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.main.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:elevation="@dimen/_4sdp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/main_activity_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                app:title="Movies"
+                app:titleTextColor="@color/white" />
+
+            <com.example.gilgoldzweig.moviedemo.ui.views.simplesearchview.SimpleSearchView
+                android:id="@+id/main_activity_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:hintColor="@color/secondary_text"
+                app:searchBackIcon="@drawable/ic_arrow_back_grey_600_24dp"
+                app:searchBackground="@color/white"
+                app:type="card" />
+
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/main_activity_movies_state_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/main_activity_movies_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/main_activity_movies_state_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:srcCompat="@drawable/empty_state"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_activity_movies_rcv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

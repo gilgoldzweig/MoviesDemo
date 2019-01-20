@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movie_item_card_root"
+    android:layout_width="@dimen/_230sdp"
+    android:layout_height="@dimen/_230sdp"
+    android:layout_margin="@dimen/_6sdp"
+    app:cardUseCompatPadding="true"
+    android:elevation="4dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:id="@+id/movie_item_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/movie_item_poster_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginBottom="10dp"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/movie_item_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_item_poster_image"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:maxLines="2" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/movie_item_genre_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_item_title_text"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/grey_600"
+            android:textSize="@dimen/_10ssp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
